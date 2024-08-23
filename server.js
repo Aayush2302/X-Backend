@@ -6,11 +6,12 @@ import cookieParser from "cookie-parser";
 import { v2 as cloudinary } from "cloudinary";
 import cors from "cors";
 
+const app = express();
+
 const corsOptions = {
   origin: "https://x-updated.netlify.app", // Replace with your Netlify domain
   methods: ["GET", "POST", "PUT", "DELETE"],
 };
-
 app.use(cors(corsOptions));
 
 //routes
@@ -25,7 +26,7 @@ cloudinary.config({
   api_key: process.env.CLOUDINARY_API_KEY,
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
-const app = express();
+
 const __dirname = path.resolve();
 const PORT = process.env.PORT || 5000;
 // middlewares
