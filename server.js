@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import connectMongoDB from "./db/connectMongoDB.js";
 import cookieParser from "cookie-parser";
 import { v2 as cloudinary } from "cloudinary";
-const cors = require("cors");
+import cors from "cors";
 
 const corsOptions = {
   origin: "https://x-updated.netlify.app", // Replace with your Netlify domain
